@@ -12,13 +12,7 @@ const Contact = ({ data }) => {
     <section className="section lg:mt-16">
       <div className="container">
         <div className="row relative pb-16">
-          <ImageFallback
-            className="-z-[1] object-cover object-top"
-            src={"/images/map.svg"}
-            fill="true"
-            alt="map bg"
-            priority={true}
-          />
+          
           <div className="lg:col-6">
             {markdownify(
               title,
@@ -107,7 +101,7 @@ const Contact = ({ data }) => {
         </div>
         <div className="row">
           {phone && (
-            <div className="md:col-6 lg:col-4">
+            <div className="md:col-6 lg:col-6">
               <Link
                 href={`tel:${phone}`}
                 className="my-4 flex h-[100px] items-center justify-center
@@ -115,13 +109,13 @@ const Contact = ({ data }) => {
               >
                 <FaUserAlt />
                 <p className="ml-1.5 text-lg font-bold text-dark dark:text-darkmode-light">
-                  {phone}
+                  (+1) 905-564-1110
                 </p>
               </Link>
             </div>
           )}
           {mail && (
-            <div className="md:col-6 lg:col-4">
+            <div className="md:col-6 lg:col-6">
               <Link
                 href={`mailto:${mail}`}
                 className="my-4 flex h-[100px] items-center justify-center
@@ -129,24 +123,12 @@ const Contact = ({ data }) => {
               >
                 <FaEnvelope />
                 <p className="ml-1.5 text-lg font-bold text-dark dark:text-darkmode-light">
-                  {mail}
+                  order@thegoldenmills.ca
                 </p>
               </Link>
             </div>
           )}
-          {location && (
-            <div className="md:col-6 lg:col-4">
-              <span
-                className="my-4 flex h-[100px] items-center justify-center
-             rounded border border-border p-4 text-primary dark:border-darkmode-border"
-              >
-                <FaMapMarkerAlt />
-                <p className="ml-1.5 text-lg font-bold text-dark dark:text-darkmode-light">
-                  {location}
-                </p>
-              </span>
-            </div>
-          )}
+    
         </div>
       </div>
     </section>

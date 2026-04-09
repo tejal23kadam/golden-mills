@@ -1,8 +1,8 @@
 {
   "site": {
-    "title": "Geeky Nextjs",
+    "title": "Golden Mills",
     "base_url": "/",
-    "favicon": "/images/favicon.png",
+    "favicon": "/images/logo.jpeg",
     "logo": "/images/logo.jpeg",
     "logo_white": "/images/logo-light.png",
     "logo_width": "150",
@@ -22,8 +22,8 @@
   },
   "params": {
     "tag_manager_id": "",
-    "footer_content": "Lorem ipsum dolor sit amt, conse adip iscing. donec iaculis tempasus laoreet. Libero ullam rgscper.",
-    "copyright": "Designed and Developed By [Statichunt](https://statichunt.com/) | Distributed by [ThemeWagon](https://themewagon.com/)"
+    "footer_content": "From Grain to Greatness.Pure Taste Starts Here",
+    "copyright": "© 2026 All Rights Reserved. Developed by Sonex InfoTech"
   },
   "metadata": {
     "meta_author": "Statichunt",

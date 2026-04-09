@@ -1,9 +1,4 @@
-import { markdownify } from "@lib/utils/textConverter";
-import shortcodes from "@shortcodes/all";
-import { MDXRemote } from "next-mdx-remote";
-import ImageFallback from "./components/ImageFallback";
-
-const About = ({ data }) => {
+const Elements = ({ data }) => {
   const { frontmatter, mdxContent } = data;
   const { title, image, education, experience } = frontmatter;
 
@@ -106,4 +101,4 @@ const About = ({ data }) => {
   );
 };
 
-export default About;
+export default Elements;

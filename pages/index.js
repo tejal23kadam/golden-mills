@@ -10,6 +10,9 @@ import dateFormat from "@lib/utils/dateFormat";
 import { sortByDate } from "@lib/utils/sortFunctions";
 import { markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
 import { FaRegCalendar } from "react-icons/fa";
 const { blog_folder, pagination } = config.settings;
 
@@ -27,7 +30,28 @@ const Home = ({
     (post) => post.frontmatter.featured
   );
   const showPosts = pagination;
-
+  const products = [
+    {
+      id: 1,
+      name: "Wheat Flour",
+      image: "/images/maidaflour.jpg",
+    },
+    {
+      id: 2,
+      name: "Maida Flour",
+      image: "/images/maidaflour.jpg",
+    },
+    {
+      id: 3,
+      name: "Besan Flour",
+      image: "/images/maidaflour.jpg",
+    },
+    {
+      id: 4,
+      name: "Multigrain Flour",
+      image: "/images/maidaflour.jpg",
+    },
+  ];
   return (
     <Base>
       {/* Banner */}
@@ -49,7 +73,7 @@ const Home = ({
                 {markdownify(banner.title_small, "span")}
               </div>
               {markdownify(banner.content, "p", "mt-4")}
-              {banner.button.enable && (
+              {/* {banner.button.enable && (
                   <Link
                     className="btn btn-primary mt-6"
                     href={banner.button.link}
@@ -57,19 +81,19 @@ const Home = ({
                   >
                     {banner.button.label}
                   </Link>
-              )}
+              )} */}
             </div>
             {banner.image_enable && (
-                <div className="col-9 lg:col-6">
-                  <ImageFallback
-                    className="mx-auto object-contain"
-                    src={banner.image}
-                    width={548}
-                    height={443}
-                    priority={true}
-                    alt="Banner Image"
-                  />
-                </div>
+              <div className="col-9 lg:col-6">
+                <ImageFallback
+                  className="mx-auto object-contain"
+                  src={banner.image}
+                  width={548}
+                  height={443}
+                  priority={true}
+                  alt="Banner Image"
+                />
+              </div>
             )}
           </div>
         </div>
@@ -79,9 +103,42 @@ const Home = ({
       <section className="section">
         <div className="container">
           <div className="row items-start">
-            <div className="mb-12 lg:mb-0 lg:col-8">
+            <div className="mb-12 lg:mb-0 lg:col-12">
+
+              <div className="py-10">
+                <h2 className="text-2xl font-semibold text-center mb-6">
+                  Our Products
+                </h2>
+
+                <Swiper
+                  spaceBetween={20}
+                  slidesPerView={1}
+                  breakpoints={{
+                    640: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 },
+                  }}
+                >
+                  {products.map((item) => (
+                    <SwiperSlide key={item.id}>
+                      <div className="bg-white rounded-2xl shadow p-4 text-center">
+
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          className="w-full h-48 object-cover rounded-lg"
+                        />
+
+                        <h3 className="mt-4 text-lg font-medium">
+                          {item.name}
+                        </h3>
+
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
               {/* Featured posts */}
-              {featured_posts.enable && (
+              {/* {featured_posts.enable && (
                 <div className="section">
                   {markdownify(featured_posts.title, "h2", "section-title")}
                   <div className="rounded border border-border p-6 dark:border-darkmode-border">
@@ -129,10 +186,10 @@ const Home = ({
                     </div>
                   </div>
                 </div>
-              )}
+              )} */}
 
               {/* Promotion */}
-              {promotion.enable && (
+              {/* {promotion.enable && (
                 <Link href={promotion.link} className="section block pt-0">
                   <ImageFallback
                     className="h-full w-full"
@@ -142,10 +199,10 @@ const Home = ({
                     alt="promotion"
                   />
                 </Link>
-              )}
+              )} */}
 
               {/* Recent Posts */}
-              {recent_posts.enable && (
+              {/* {recent_posts.enable && (
                 <div className="section pt-0">
                   {markdownify(recent_posts.title, "h2", "section-title")}
                   <div className="rounded border border-border px-6 pt-6 dark:border-darkmode-border">
@@ -163,14 +220,14 @@ const Home = ({
               <Pagination
                 totalPages={Math.ceil(posts.length / showPosts)}
                 currentPage={1}
-              />
+              /> */}
             </div>
             {/* sidebar */}
-            <Sidebar
+            {/* <Sidebar
               className={"lg:mt-[9.5rem]"}
               posts={posts}
               categories={categories}
-            />
+            /> */}
           </div>
         </div>
       </section>

@@ -9,27 +9,21 @@
       "url": "/about"
     },
     {
-      "name": "Elements",
-      "url": "/elements"
+      "name": "Service",
+      "url": "/categories"
+    },
+    {
+      "name": "Inquiry",
+      "url": "/categories"
     },
     {
       "name": "Contact",
       "url": "/contact"
-    },
-    {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Categories",
-          "url": "/categories"
-        }
-      ]
     }
+    
   ],
   "footer": [
-    {
+     {
       "name": "Home",
       "url": "/"
     },
@@ -38,12 +32,16 @@
       "url": "/about"
     },
     {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Service",
+      "url": "/categories"
     },
     {
-      "name": "Privacy Policy",
-      "url": "#"
+      "name": "Inquiry",
+      "url": "/categories"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
     }
   ]
 }
