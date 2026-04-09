@@ -1,18 +1,24 @@
-
 const isProd = process.env.NODE_ENV === "production";
 
-const basePath = isProd ? "/geeky-nextjs" : "";
+// ✅ MUST match your GitHub repo name
+const basePath = isProd ? "/golden-mills" : "";
 
 const nextConfig = {
+  output: "export", // ✅ REQUIRED for GitHub Pages
+
   basePath,
   assetPrefix: basePath,
+
   images: {
     unoptimized: true,
   },
+
   trailingSlash: true,
+
   eslint: {
     ignoreDuringBuilds: true,
   },
+
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
   },
