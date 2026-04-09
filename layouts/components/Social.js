@@ -79,7 +79,7 @@ const Social = ({ source, className }) => {
             }}
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoFacebook />
+            {/* <IoLogoFacebook /> */}
           </a>
         </li>
       )}
@@ -94,7 +94,7 @@ const Social = ({ source, className }) => {
             }}
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoStackoverflow />
+            {/* <IoLogoStackoverflow /> */}
           </a>
         </li>
       )}
@@ -109,7 +109,7 @@ const Social = ({ source, className }) => {
             }}
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoTwitter />
+            {/* <IoLogoTwitter /> */}
           </a>
         </li>
       )}
@@ -124,7 +124,7 @@ const Social = ({ source, className }) => {
             }}
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoInstagram />
+            {/* <IoLogoInstagram /> */}
           </a>
         </li>
       )}
@@ -139,7 +139,7 @@ const Social = ({ source, className }) => {
             }}
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoYoutube />
+            {/* <IoLogoYoutube /> */}
           </a>
         </li>
       )}
@@ -154,7 +154,7 @@ const Social = ({ source, className }) => {
             }}
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoLinkedin />
+            {/* <IoLogoLinkedin /> */}
           </a>
         </li>
       )}
@@ -169,7 +169,7 @@ const Social = ({ source, className }) => {
             }}
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoGithub />
+            {/* <IoLogoGithub /> */}
           </a>
         </li>
       )}
