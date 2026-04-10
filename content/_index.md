@@ -4,7 +4,7 @@ banner:
   title_small: "to Golden Mills"
   content: High-quality flour mill producing fresh, hygienic, and finely ground grains for everyday use.Committed to delivering purity, nutrition, and consistent taste in every batch.
   image_enable: true
-  image: /images/banner-author.png
+  image: /images/banner-author.jpg
   button:
     enable: true
     label: Know About Me
